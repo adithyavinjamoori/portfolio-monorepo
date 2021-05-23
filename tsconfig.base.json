@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "ng-components": ["libs/angular-lib/src/index.ts"],
+      "@resume/assets": ["libs/assets/src/index.ts"],
+      "react-components": ["libs/react-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

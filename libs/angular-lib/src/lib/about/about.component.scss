@@ -1,0 +1,64 @@
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.about-container{
+    padding: 20px;
+    min-height: 100vh;
+    background: #1b1b1b;
+    padding: 20px 5%;
+    .sections{
+        display: flex;
+
+    }
+    .left-section{
+        width: 40%;
+        margin-right: 20px;
+        position: relative;
+        .image-container{
+            animation-name: fadeInLeft;
+            animation-duration: 1s;
+            text-align: center;
+            height: 60vh;
+            background: url("../../../../assets/src/lib/images/IMG_1207.jpeg") no-repeat center;
+            background-size: contain;
+        }
+        .about-me{
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+    .right-section{
+        margin-left: 20px;
+    }
+
+    @media only screen and (max-width: 720px) {
+        .sections{
+            display: block;
+
+            .left-section{
+                width: 100%;
+                margin-right: 0;
+               .social-media{
+                    position: static;
+               }
+            }
+            .right-section{
+                margin: 0 10px;
+            }
+    
+        }
+      }
+}
+

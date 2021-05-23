@@ -1,0 +1,72 @@
+
+
+@keyframes fadeFromLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.main-container{
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    .image-container{
+        background: url(../../../../assets/src/lib/images/developer.svg) center no-repeat;
+        animation-name: fadeFromLeft;
+        animation-duration: 1s;
+        height: 350px;
+        background-size: 350px;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        &:before{
+            content: '<img>';
+            font-family: 'La Belle Aurore',cursive;
+            color: #515152;
+            font-size: 12px;
+            position: absolute;
+        }
+        &:after{
+            content: '</img>';
+            font-family: 'La Belle Aurore',cursive;
+            color: #515152;
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+    .title{
+        font-size: 20px;
+        text-align: center;
+        color: #6de8e8a6;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .sub-title{
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 10px ;
+    }
+    .companies{
+        color: #C5F2C7;
+    }
+    .skills{
+        color: #ECB9F9;
+    }
+}

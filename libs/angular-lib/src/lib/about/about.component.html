@@ -1,0 +1,25 @@
+<div class="about-container">
+
+    <div class="sections">
+
+    <div class="left-section">
+        <h2 class="title">About Me</h2>
+
+        <div class="image-container">
+            <!-- <img src="../../../../assets/src/lib/images/IMG_1207.jpeg"> -->
+        </div>
+        <p class="about-me">
+            {{info.aboutMe}}
+        </p>
+        <div class="social-media">
+            <a class="twitter icon" [href]="info.twitter"></a>
+            <a class="linkdn icon" [href]="info.linkdn"></a>
+            <a class="github icon" [href]="info.github"></a>
+        </div>
+    </div>
+    <div class="right-section">
+        <h3>Timeline</h3>
+        <app-timeline></app-timeline>
+    </div>
+    </div>
+</div>

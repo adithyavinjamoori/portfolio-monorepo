@@ -1,0 +1,273 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    background: #181818;
+    color: #fff;
+    margin: 0;
+    font-family: Helvetica,"Arial";
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+
+    }
+    h2.title {  
+        color: #6de8e8a6;
+        margin: 0 20px 20px;
+        position: relative;
+        display: inline-block;
+        &:before{
+            content: '<h2>';
+            font-family: 'La Belle Aurore',cursive;
+            color: #515152;
+            font-size: 12px;
+            left: -30px;
+            top: -10px;
+            color: #fff;
+            opacity: 0.5;
+
+            position: absolute;
+
+        }
+
+        &:after{
+            content: '</h2>';
+            font-family: 'La Belle Aurore',cursive;
+            color: #515152;
+            font-size: 12px;
+            right: -30px;
+            bottom: -10px;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+        }
+    }
+
+    .social-media{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        left: 30%;
+        .icon{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            margin-right: 20px;
+            transition: 0.5s all;
+        }
+        .twitter{
+            background: url("./images/twitter.svg")center center no-repeat #fff;
+            background-size: 50px;
+            &:hover{
+                background-size: 55px;
+            }
+        }
+
+        .linkdn{
+            background: url("./images/linkdn.svg")center center no-repeat #fff;
+            background-size: 40px;
+            &:hover{
+                background-size: 45px;
+            }
+        }
+
+        .github{
+            background: url("./images/github.svg")center center no-repeat #fff;
+            background-size: 50px;
+            &:hover{
+                background-size: 55px;
+            }
+        }
+
+        .email{
+            background: url("./images/email.svg")center center no-repeat #fff;
+            background-size: 40px;
+            &:hover{
+                background-size: 45px;
+            }
+        }
+    }
+
+    a{
+        display: inline-block;
+        color: #ECB9F9 !important;
+        text-decoration: none;
+        border-bottom: 1px solid #ECB9F9;
+        transition: 0.5s all;
+        padding-bottom: 5px;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    p{
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        &:before{
+            content: '<p>';
+            font-family: 'La Belle Aurore',cursive;
+            color: #515152;
+            font-size: 12px;
+            left: -20px;
+            top: -10px;
+            color: #fff;
+            opacity: 0.5;
+
+            position: absolute;
+
+        }
+
+        &:after{
+            content: '</p>';
+            font-family: 'La Belle Aurore',cursive;
+            color: #515152;
+            font-size: 12px;
+            right: -30px;
+            bottom: -10px;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+        }
+    }
+    .page-icon{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        &.coding{
+            background: url(./images/coding.svg);
+            background-size: 50px;
+            top: 30%;
+            right: 10%;
+            opacity: 0.4;
+            transform: rotate(15deg);
+        }
+        &.braces{
+            background: url(./images/braces.svg);
+            background-size: 50px;
+            top: 65%;
+            left: 10%;
+            opacity: 0.4;
+            transform: rotate(-29deg);
+        }
+        &.brackets{
+            background: url(./images/brackets.svg);
+            background-size: 50px;
+            top: 75%;
+            right: 15%;
+            opacity: 0.4;
+            transform: rotate(-45deg);
+
+        }
+    }
+    .skillSet-container{
+        padding: 20px 5%;
+        border-bottom: 1px solid #000;
+    }
+    .skills{
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: center;
+        margin-bottom: 40px;
+        li{
+            height: 50px;
+            width: 50px;
+            margin: 10px 30px;
+            opacity: 0.8;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+            &:hover{
+                opacity: 1;
+            }
+
+            &.JavaScript{
+                background: url("./images/icons/JavaScript.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.TypeScript{
+                background: url("./images/icons/TypeScript.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.Angular{
+                background: url("./images/icons/Angular.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.React{
+                background: url("./images/icons/React.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.CSS{
+                background: url("./images/icons/CSS.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+
+            &.SASS{
+                background: url("./images/icons/SASS.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.HTML5{
+                background: url("./images/icons/HTML5.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+
+            &.Highcharts{
+                background: url("./images/icons/Highcharts.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.Figma{
+                background: url("./images/icons/Figma.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.AdobeXD{
+                background: url("./images/icons/AdobeXD.svg") center no-repeat;
+                background-size: 50px;
+            }
+            &.PowerBI{
+                background: url("./images/icons/PowerBI.svg") center no-repeat #fff;
+                background-size: 50px;
+            }
+
+            &.AWS{
+                background: url("./images/icons/AWS.svg") center no-repeat #fff;
+                background-size: 50px;
+            }
+
+            &.AzureDevOps{
+                background: url("./images/icons/AzureDevOps.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+
+
+        }
+        .PowerBI,.AWS{
+            background: #fff;
+        }
+        @media only screen and (max-width: 420px) {
+        margin-bottom: 0;
+    
+        }
+    }
+}
