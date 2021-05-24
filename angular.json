@@ -250,6 +250,27 @@
           }
         }
       }
+    },
+    "footer-lib": {
+      "root": "libs/footer-lib",
+      "sourceRoot": "libs/footer-lib/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/footer-lib/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/footer-lib"],
+          "options": {
+            "jestConfig": "libs/footer-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

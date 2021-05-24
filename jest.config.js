@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/angular-lib',
     '<rootDir>/libs/assets',
     '<rootDir>/libs/react-lib',
+    '<rootDir>/libs/footer-lib',
   ],
 };

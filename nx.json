@@ -37,6 +37,9 @@
     },
     "react-lib": {
       "tags": []
+    },
+    "footer-lib": {
+      "tags": []
     }
   }
 }
