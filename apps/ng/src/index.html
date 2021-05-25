@@ -7,8 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-custom-element@3.0.0/dist/vue-custom-element.js"></script>
+    <script>
+      const MyVueWebComp = {
+        props: ['info'],
+        template:`
+        <div class="personal-container">
+          <h2 class="title">More About Me</h2>
+          <div class="sections">
+            <div class="section">
+                <h3>Hobbies</h3>
+                <ul class="hobbies">
+                    <li v-for="item in info.hobbies">{{item}}</li>
+              </ul>
+            </div>
+            <div class="section">
+              <h3>My Favourite Books</h3>
+              <ul class="books">
+                      <li class="book" v-for="i in info.books" :class="i.book"  :title="i.book" ></li>
+              </ul>
+            </div>
+            <div class="section">
+                <h3>Articles</h3>
+                <div>
+                    Coming Soon...
+                </div>
+            </div>
+          </div>
+          <div class="about-me">
+        <div class="more">
+                I occasionally take on <br/>freelance opportunities      
+        </div>
+        <p>Have an exciting project where you need some help?<br/>Send me over an <a href="mailto:vin.adithya@gmail.com" >email</a>, and let's chat.</p>
+
+        </div>
+        </div>
+
+        `,
+        data() {
+          return {
+            text: '',
+            texts: []
+          };
+        },
+        methods: {
+        }
+      };
+      Vue.customElement('my-vue-web-comp', MyVueWebComp);
+    </script>
+    
   </head>
   <body>
     <resume-root></resume-root>
+    
   </body>
 </html>

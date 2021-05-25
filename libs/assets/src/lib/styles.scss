@@ -53,6 +53,106 @@ body{
         }
     }
 
+    .angular{
+        position: relative;
+        &:before{
+            content: "<angular>";
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            left: 50px;
+            top: 75px;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+
+        }
+
+        &:after{
+            content: '</angular>';
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            right: 20px;
+            bottom: 0;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+        }
+    }
+
+    #react{
+        position: relative;
+        &:before{
+            content: "<React>";
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            left: 10px;
+            top: -20px;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+
+        }
+
+        &:after{
+            content: '</React>';
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            right: 20px;
+            bottom: 0;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+        }
+    }
+
+    #vue{
+        position: relative;
+        &:before{
+            content: "<vue>";
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            left: 10px;
+            top: -10px;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+
+        }
+
+        &:after{
+            content: '</vue>';
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            right: 20px;
+            bottom: 0;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+        }
+    }
+
+    #webComponent{
+        position: relative;
+        &:before{
+            content: "<webComponent>";
+            font-family: "La Belle Aurore", cursive;
+            color: #515152;
+            font-size: 25px;
+            left: 10px;
+            top: -30px;
+            color: #fff;
+            opacity: 0.5;
+            position: absolute;
+
+        }
+    }
+
     .social-media{
         margin-top: 20px;
         display: flex;
@@ -339,6 +439,70 @@ body{
         }
         a{
             color: #6de8e8a6
+        }
+    }
+
+    .personal-container{
+        padding: 20px 5%;
+        .sections{
+            display: flex;
+            justify-content: space-between;
+            h3{}
+            .section{
+                width: 33%;
+                text-align: center;
+            }
+            .hobbies li{
+                margin: 10px
+            }
+            .books{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .book {
+                    margin: 10px 0;
+                    width: 33%;
+                    height: 150px;
+                    &.Da_Vinci_Code{
+                        background:url("./images//books/Da_Vinci_Code.jpeg") no-repeat center;
+                        background-size: 100px;
+                    }
+
+                    &.Intellignet_Investor{
+                        background:url("./images//books/Intellignet_Investor.jpeg") no-repeat center;
+                        background-size: 100px;
+                    }
+
+                    &.Man_Who_Knew_Infinity{
+                        background:url("./images//books/Man_Who_Knew_Infinity.jpeg") no-repeat center;
+                        background-size: 100px;
+                    }
+
+                    &.Mocking_Bird{
+                        background:url("./images//books/Mocking_Bird.jpeg") no-repeat center;
+                        background-size: 100px;
+                    }
+
+                    &.The_Whistler{
+                        background:url("./images//books/The_Whistler.jpeg") no-repeat center;
+                        background-size: 100px;
+                    }
+
+                    &.Time_to_Kill{
+                        background:url("./images//books/Time_to_Kill.jpeg") no-repeat center;
+                        background-size: 100px;
+                    }
+                }
+            }
+    
+        }
+        @media only screen and (max-width: 720px) {
+            .sections{
+                display: block;
+                .section{
+                    width: 100%
+                }
+            }
         }
     }
 

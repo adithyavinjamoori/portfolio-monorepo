@@ -1,13 +1,7 @@
 export class Footer extends HTMLElement {
 
   connectedCallback() {
-    this.innerHTML = `<div class="about-me">
-    <div class="more">
-            I occasionally take on <br/>freelance opportunities      
-    </div>
-    <p>Have an exciting project where you need some help?<br/>Send me over an <a href="mailto:vin.adithya@gmail.com" >email</a>, and let's chat.</p>
-
-    </div>
+    this.innerHTML = `
     <div class="footer-container">
     <div class="section">
 
