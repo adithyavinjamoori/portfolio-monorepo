@@ -1,9 +1,9 @@
 <resume-ng-header ></resume-ng-header>
 <div class="angular">
-    <resume-ng-home></resume-ng-home>
-</div>
-<div class="angular">
-    <resume-ng-about id="about_me"></resume-ng-about>
+    <resume-ng-home [info]="info"></resume-ng-home>
+<!-- </div>
+<div class="angular"> -->
+    <resume-ng-about [info]="info" id="about_me"></resume-ng-about>
 </div>
 <div id="react">
     <div id="skills"></div>
@@ -18,3 +18,15 @@
 </div>
 <div class="coding page-icon"></div>
 <div class="braces page-icon"></div>
+
+<div class="info-container" tooltip (click)="toggleDialog()" title = "Click here to know about this project"></div>
+
+<nx-dialog     
+[isModelOpen]="true"
+*ngIf="show"
+[autoClose]="true"
+headerTitle="About Project"
+(closeDialog)="toggleDialog()"
+>
+    <resume-about-project ></resume-about-project >
+</nx-dialog>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {infoJson} from "../../../../assets/src/lib/info.json"
 
 @Component({
@@ -7,17 +7,15 @@ import {infoJson} from "../../../../assets/src/lib/info.json"
   styleUrls: ['./ng-home.component.scss']
 })
 export class NgHomeComponent implements OnInit {
-
-  public info:any = infoJson;
-  public skillsShort:string;
-  public companies:string;
+  @Input() info:any
+  public skillsShort:string = "";
+  public companies:string = "";
   constructor() {
-
-  this.companies = infoJson.companies.join(" | ")
-  this.skillsShort = infoJson.skillsShort.join(" | ")
    }
 
   ngOnInit(): void {
+    this.companies = this.info.companies.join(" | ")
+    this.skillsShort = this.info.skillsShort.join(" | ")
   }
 
 }

@@ -58,11 +58,10 @@ body{
         &:before{
             content: "<angular>";
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             left: 50px;
             top: 75px;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
 
@@ -71,13 +70,17 @@ body{
         &:after{
             content: '</angular>';
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             right: 20px;
             bottom: 0;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
+        }
+        @media only screen and (max-width: 420px) {
+            &:before,&:after{
+                content: "";
+            }
         }
     }
 
@@ -86,11 +89,10 @@ body{
         &:before{
             content: "<React>";
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             left: 10px;
             top: -20px;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
 
@@ -99,13 +101,17 @@ body{
         &:after{
             content: '</React>';
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             right: 20px;
             bottom: 0;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
+        }
+        @media only screen and (max-width: 420px) {
+            &:before,&:after{
+                content: "";
+            }
         }
     }
 
@@ -114,11 +120,10 @@ body{
         &:before{
             content: "<vue>";
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             left: 10px;
             top: -10px;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
 
@@ -127,13 +132,17 @@ body{
         &:after{
             content: '</vue>';
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             right: 20px;
             bottom: 0;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
+        }
+        @media only screen and (max-width: 420px) {
+            &:before,&:after{
+                content: "";
+            }
         }
     }
 
@@ -142,16 +151,23 @@ body{
         &:before{
             content: "<webComponent>";
             font-family: "La Belle Aurore", cursive;
-            color: #515152;
+            color: #ECB9F9;
             font-size: 25px;
             left: 10px;
             top: -30px;
-            color: #fff;
             opacity: 0.5;
             position: absolute;
 
         }
+
+        @media only screen and (max-width: 420px) {
+                &:before{
+                    content: "";
+                }
+        }
     }
+
+
 
     .social-media{
         margin-top: 20px;
@@ -220,7 +236,6 @@ body{
         &:before{
             content: '<p>';
             font-family: 'La Belle Aurore',cursive;
-            color: #515152;
             font-size: 12px;
             left: -20px;
             top: -10px;
@@ -234,7 +249,6 @@ body{
         &:after{
             content: '</p>';
             font-family: 'La Belle Aurore',cursive;
-            color: #515152;
             font-size: 12px;
             right: -30px;
             bottom: -10px;
@@ -250,7 +264,7 @@ body{
         &.coding{
             background: url(./images/coding.svg);
             background-size: 50px;
-            top: 30%;
+            top: 10%;
             right: 10%;
             opacity: 0.4;
             transform: rotate(15deg);
@@ -366,8 +380,7 @@ body{
             background: #fff;
         }
         @media only screen and (max-width: 420px) {
-        margin-bottom: 0;
-    
+            margin-bottom: 0;
         }
     }
 
@@ -417,6 +430,11 @@ body{
                     margin: 10px 0;
                     display: block;
                 }
+            }
+            .logo{
+                position: absolute;
+                right: 0;
+                bottom: 0;
             }
         }
 
@@ -504,6 +522,83 @@ body{
                 }
             }
         }
+ 
+    }
+
+    .tooltip {
+        position: absolute;
+        max-width: 400px;
+        font-size: 12px;
+        text-align: left;
+        color: #1b1b1b;
+        padding: 6px 8px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03), 0 4px 5px 0 rgba(0, 0, 0, 0.04);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+      
+        &:after {
+          content: "";
+          position: absolute;
+          border-style: solid;
+        }
+      
+        &.tooltip-top:after {
+          top: 105%;
+          left: 50%;
+          margin-left: -6px;
+          border-width: 6px;
+          border-color: rgba(6, 52, 63, 0.922) transparent transparent transparent;
+        }
+      
+        &.tooltip-bottom:after {
+          bottom: 100%;
+          left: 50%;
+          margin-left: -6px;
+          border-width: 6px;
+          border-color: transparent transparent rgba(6, 52, 63, 0.922) transparent;
+        }
+      
+        &.tooltip-left:after {
+          top: 50%;
+          left: 100%;
+          margin-top: -6px;
+          border-width: 6px;
+          border-color: transparent transparent transparent rgba(6, 52, 63, 0.922);
+        }
+      
+        &.tooltip-right:after {
+          top: 50%;
+          right: 100%;
+          margin-top: -6px;
+          border-width: 6px;
+          border-color: transparent rgba(6, 52, 63, 0.922) transparent transparent;
+        }
+      
+        &.tooltip-show {
+          opacity: 1;
+        }
+      }
+
+      .info-container{
+        height: 50px;
+        width: 100px;
+        background: url("./images/info.svg") no-repeat center;
+        position: fixed;
+        right: 0;
+        bottom: 20%;
+        cursor: pointer;
+    }
+
+    .about-project-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0.6;
+        z-index: 11;
     }
 
 }

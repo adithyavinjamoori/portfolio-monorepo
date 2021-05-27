@@ -10,7 +10,8 @@ import { infoJson } from '../../../../libs/assets/src/lib/info.json';
 })
 export class AppComponent {
   title = 'ng';
-  info:any = infoJson
+  info:any = infoJson;
+  show:boolean = false;
   constructor() {
     this.info.books = this.info.books.map( (i:any) =>{
       i = i.replace(/\s/g, '_')
@@ -25,7 +26,10 @@ export class AppComponent {
     this.renderReactComponent();
   }
   renderReactComponent() {
-    ReactDOM.render(React.createElement(Skills), document.getElementById("skills"));
+    ReactDOM.render(React.createElement(Skills,this.info), document.getElementById("skills"));
+  }
 
+  toggleDialog(){
+    this.show = !this.show;
   }
 }

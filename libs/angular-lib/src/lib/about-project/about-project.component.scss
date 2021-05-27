@@ -1,0 +1,15 @@
+.about-project{
+    font-size: 15px;
+    .image-overview-container{
+        height: 320px;
+        width: 400px;
+        background:url("../../../../assets/src/lib/images/Overview.svg") center no-repeat;
+        background-size: 400px;
+        margin: 0 auto;
+    }
+
+    span,a{
+        font-style: italic;
+        color: blueviolet !important;
+    }
+}

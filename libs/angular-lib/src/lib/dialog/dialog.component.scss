@@ -1,0 +1,176 @@
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .dialog-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  
+    .dialog-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: .5;
+    }
+  
+    .dialog-content {
+      width: 66vw;
+      height: auto;
+      max-height: 92%;
+      overflow-x: hidden;
+      position: relative;
+      border-radius: 3px;
+      padding: 0px;
+      background: #fff;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+      display: flex;
+      flex-direction: column;
+      animation: .1s slideInFromTop;
+  
+      .dialog-header {
+        padding: 10px 15px;
+        background: rgba(223, 232, 223, 0.56);
+        border-radius: 3px 3px 0 0;
+        color: #656565;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        h1 {
+          margin: 0;
+          font-size: 15px;
+          color: #222;
+          font-weight: bold;
+        }
+  
+        .modal-info {
+          font-size: 12px;
+          color: #8d8d8d;
+          text-transform: none;
+        }
+  
+        button {
+            padding: 0;
+            border: 0;
+            background: 0;
+            height: 30px;
+            width:30px;
+            outline: 0;
+            opacity: 0.8;
+            cursor: pointer;
+            background: url(../../../../assets/src/lib/images/close.svg) center no-repeat;
+            background-size: 25px;
+            &:focus,&:hover {
+                opacity: 1;
+                background-size: 28px;
+            }
+  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            transition: all .5s;
+        }
+      }
+  
+      .dialog-body {
+        padding: 15px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        line-height: 1.4;
+        font-size: 12px;
+        text-align: left;
+        color: #000;
+        flex: 1 1 auto;
+        background-color: #fff;
+        position: relative;
+      }
+  
+      .dialog-footer {
+        padding: 10px 15px;
+        width: 100%;
+        text-align: right;
+        background-color: #fff;
+  
+        button {
+          padding: 0;
+          border: 0;
+          background: 0;
+          cursor: pointer;
+          margin-left: 10px;
+  
+          &:focus {
+            outline: 0;
+          }
+  
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+        }
+  
+        .btn {
+          border: 1px solid #049fc4;
+          text-transform: uppercase;
+          border-radius: 3px;
+          padding: 6px 20px;
+          font-weight: bold;
+          font-size: 14px;
+          white-space: nowrap;
+  
+          &.btn-form {
+            background: #fff;
+            color: #049fc4;
+          }
+  
+          &.ghost-btn {
+            border: 0;
+            color: #b5b5b5;
+            transition: color 200ms ease-out;
+  
+            &:hover {
+              color: #222;
+            }
+          }
+  
+          &.primary-btn {
+            background: #049fc4;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 1024px) {
+    .dialog-wrapper {
+      .dialog-content {
+        max-width: calc(100% - 20px) !important;
+      }
+    }
+  }
+  
+  body.no-scroll {
+    overflow: hidden;
+  }
+  

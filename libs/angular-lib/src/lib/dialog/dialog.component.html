@@ -1,0 +1,29 @@
+<div
+  class="dialog-wrapper"
+  *ngIf="isModelOpen"
+>
+  <div class="dialog-overlay"></div>
+  <div
+    class="dialog-content"
+    [ngStyle]="styles"
+  >
+    <div class="dialog-header">
+        <div class="header-title">
+            <h1>{{headerTitle}}</h1>
+          </div>
+    
+          <button
+            class="header-close"
+            (click)="close()"
+          >
+        
+        </button>
+    </div>
+
+    <div class="dialog-body">
+      <ng-content></ng-content>
+    </div>
+
+
+  </div>
+</div>

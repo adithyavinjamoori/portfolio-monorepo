@@ -13,7 +13,7 @@
       const MyVueWebComp = {
         props: ['info'],
         template:`
-        <div class="personal-container">
+        <div v-if="info" class="personal-container">
           <h2 class="title">More About Me</h2>
           <div class="sections">
             <div class="section">
