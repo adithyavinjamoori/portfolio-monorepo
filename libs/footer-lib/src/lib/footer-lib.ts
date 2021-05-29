@@ -2,8 +2,8 @@ export class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div class="footer-container">
-    <div class="section">
+    <footer>
+    <section>
 
         <span> © 2021, Adithya Vinjamoori </span>
         <div class="contact-me">
@@ -14,8 +14,8 @@ export class Footer extends HTMLElement {
             </div>
         </div>
         <h1 class="logo"></h1>
-    </div>
-</div>
+    </section>
+</footer>
 `;
   }
 }

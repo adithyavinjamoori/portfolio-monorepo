@@ -6,7 +6,8 @@ import './skills.module.scss';
 export interface SkillsProps {
   skillset:Array<string>,
   Tools:Array<string>,
-  Clouds:Array<string>
+  Clouds:Array<string>,
+  moreSkills:Array<string>
 }
 
 export function Skills(props: SkillsProps) {
@@ -17,12 +18,18 @@ export function Skills(props: SkillsProps) {
 
 
   return (
-    <div className="skillSet-container">
+    <section className="skillSet-container">
           <h2 className="title">Skillset</h2>
           <ul className="skills">{skillItems}</ul>
           <ul className="skills">{toolsItems}</ul>
           <ul className="skills">{cloudItems}</ul>
-    </div>
+
+          <div className="moreSkills">
+            <span>
+              Also, have good exposure in {props.moreSkills.join(" | ")}
+            </span>
+          </div>
+    </section>
   );
 }
 

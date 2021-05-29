@@ -1,12 +1,28 @@
 
 
-# Resume
+# Project - PortFolio
 
 This project was generated using [Nx](https://nx.dev).
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+ <p>
+            This is web page is developed in <span> Angular, React, Vue </span> and <span>webComponents</span>. Host application is in <span>Angular</span>
+            and different components are developed in different libraries.<br/><br/><i>Check the below image for clear picture.</i>
 
-🔎 **Smart, Extensible Build Framework**
+</p>
+
+<p style="text-align: center"><img src="./libs/assets/src/lib/images/Overview.svg" width="450"></p>
+
+ <p>
+            I used <span class="nx"> Nx monorepo </span> for this mashup. The main application is in <span>Angular</span> and created libraries for <span> Angular, React</span> and <span>Web components.</span>
+            Since <span class="nx">Nx</span> is yet to add support for vue components, I created a vue component in host app it self and rendering it after converted into a web component.
+            Host application (i.e, Angular) is passing data to other components as @Inputs() (to Angular components) or as props (to react and vue).
+</p>
+<p>
+            Images and styles are added in Assets Library which is shared across all libraries and host application.
+            <br/><br/>
+            And this application is hosted in <span>AWS</span>
+</p>
+
 
 ## Quick Start & Documentation
 
@@ -88,18 +104,3 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 
 
-
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.

@@ -276,6 +276,9 @@ body{
             left: 10%;
             opacity: 0.4;
             transform: rotate(-29deg);
+            @media only screen and (max-width: 420px) {
+                top: 85%;
+            }
         }
         &.brackets{
             background: url(./images/brackets.svg);
@@ -289,7 +292,9 @@ body{
     }
     .skillSet-container{
         padding: 20px 5%;
-        border-bottom: 1px solid #000;
+        .moreSkills{
+            text-align: center
+        }
     }
     .skills{
         display: flex;
@@ -329,6 +334,11 @@ body{
 
             &.CSS{
                 background: url("./images/icons/CSS.svg") center no-repeat;
+                background-size: 50px;
+            }
+
+            &.Vue{
+                background: url("./images/icons/Vue.svg") center no-repeat;
                 background-size: 50px;
             }
 
@@ -384,15 +394,16 @@ body{
         }
     }
 
-    .footer-container{
-        background: #1b1b1b;
+    footer{
         padding: 10px 20px;
         padding: 10px 5%;
-        .section{
+        box-shadow: 0 -2px 20px 0px #000;
+
+        section{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .nav .items{
+            nav .items{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -424,7 +435,7 @@ body{
             }
         }
         @media only screen and (max-width: 720px) {
-            .section{
+            section{
                 display: block;
                 .social-media{
                     margin: 10px 0;
@@ -461,6 +472,7 @@ body{
     }
 
     .personal-container{
+        background: #1b1b1b;
         padding: 20px 5%;
         .sections{
             display: flex;
@@ -590,6 +602,9 @@ body{
         right: 0;
         bottom: 20%;
         cursor: pointer;
+        @media only screen and (max-width: 420px) {
+            display: none;
+        }
     }
 
     .about-project-container {

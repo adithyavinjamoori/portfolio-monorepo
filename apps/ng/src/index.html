@@ -13,7 +13,7 @@
       const MyVueWebComp = {
         props: ['info'],
         template:`
-        <div v-if="info" class="personal-container">
+        <section v-if="info" class="personal-container">
           <h2 class="title">More About Me</h2>
           <div class="sections">
             <div class="section">
@@ -39,10 +39,11 @@
         <div class="more">
                 I occasionally take on <br/>freelance opportunities      
         </div>
-        <p>Have an exciting project where you need some help?<br/>Send me over an <a href="mailto:vin.adithya@gmail.com" >email</a>, and let's chat.</p>
-
+        <article>
+          <p>Have an exciting project where you need some help?<br/>Send me over an <a href="mailto:vin.adithya@gmail.com" >email</a>, and let's chat.</p>
+        </article>
         </div>
-        </div>
+        </section>
 
         `,
         data() {

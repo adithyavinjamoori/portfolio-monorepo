@@ -44,8 +44,9 @@ export const infoJson:any = {
     github:"https://github.com/adithyavinjamoori",
     linkdn:"https://www.linkedin.com/in/adithya-vin/",
     skillset: [
-        "JavaScript","TypeScript","Angular","React","CSS","SASS","HTML5","Highcharts"
+        "JavaScript","TypeScript","Angular","React","Vue","CSS","SASS","HTML5","Highcharts"
     ],
+    moreSkills:["Micro Frontends","Mono, Multi and Hybrid Repos"],
     Tools:[
         "Figma","AdobeXD","PowerBI"
     ],
