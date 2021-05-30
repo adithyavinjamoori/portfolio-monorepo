@@ -15,6 +15,7 @@ This project was generated using [Nx](https://nx.dev).
  <p>
             I used <span class="nx"> Nx monorepo </span> for this mashup. The main application is in <span>Angular</span> and created libraries for <span> Angular, React</span> and <span>Web components.</span>
             Since <span class="nx">Nx</span> is yet to add support for vue components, I created a vue component in host app it self and rendering it after converted into a web component.
+            
             Host application (i.e, Angular) is passing data to other components as @Inputs() (to Angular components) or as props (to react and vue).
 </p>
 <p>
@@ -24,83 +25,83 @@ This project was generated using [Nx](https://nx.dev).
 </p>
 
 
-## Quick Start & Documentation
-
-[Nx Documentation](https://nx.dev/angular)
-
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
-
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## Folder Structure of this project
 
 Below are our core plugins:
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
-
-## Generate an application
-
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@resume/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+- apps
+    - ng
+        - Contains the code for host application. 
+- libs
+   - angular-lib
+        - Contains all angular components
+   - react-lib
+        - Contains all react components
+   - footer-lib
+        - It contains web component
+   - assets
+        - Folder where all images and styles are present.
 
 
+## Quick Start & Documentation
+
+<h3>MonoRepos</h3>
+
+<section>
+
+A monorepo (mono repository) is a single repository that stores all of your code and assets for every project.
+
+Using a monorepo is important for many reasons. It creates a single source of truth. It makes it easier to share code. It even makes it easier to refactor code.
+</section>
+
+
+Click here to know about [MonoRepos](https://link.medium.com/vcx4qA0cGgb)
+
+
+Know how to develope monorepos using [Nx](https://nx.dev).
+
+
+## Run Project
+
+Run `nx serve ng --port 4400` to run the project and open http://localhost:4400/
+
+ng is the name of host application which i created in Angular. Hence the name is ng.
+
+## Build Project
+Run `nx build ng` to build the project. 
+
+A /dist folder is created at root folder and deploy this content anywhere.
+
+## To see Dep Graph
+Run `nx dep-graph` to view the dependencies of libraries
+
+## Few More useful Commands 
+
+<h4>Create new application in Angular</h4>
+
+`ng generate @nrwl/angular:application <--App Name-->`
+
+<h4>Create new application in React</h4>
+
+`ng generate @nrwl/react:application <--App Name-->`
+
+<h4>Creating angular library with publishable</h4>
+
+`npx nx g @nrwl/angular:lib <--Library Name--> --publishable --importPath ng-components`
+
+<h4>Creating react library with publishable</h4>
+
+`npx nx g @nrwl/react:lib <--Library Name--> --publishable --importPath react-components`
+
+
+<b>NOTE:</b> We can publish these libraries to npm as an artifact.
+
+<h4>Creating Shared Assets Library</h4>
+
+`nx g @nrwl/web:lib <--Library Name--> —directory=shared `
+
+<b>NOTE:</b> Keep all your styles and images in this folder and this can be shared across all liraries and applications.
+
+<h4> To remove any library </h4>
+
+` nx g @nrwl/workspace:remove <--Library Name--> --forceRemove`
