@@ -16,6 +16,8 @@ This project was generated using [Nx](https://nx.dev).
             I used <span class="nx"> Nx monorepo </span> for this mashup. The main application is in <span>Angular</span> and created libraries for <span> Angular, React</span> and <span>Web components.</span>
             Since <span class="nx">Nx</span> is yet to add support for vue components, I created a vue component in host app it self and rendering it after converted into a web component.
             
+</p> 
+<p> 
             Host application (i.e, Angular) is passing data to other components as @Inputs() (to Angular components) or as props (to react and vue).
 </p>
 <p>
