@@ -37,14 +37,14 @@ export const infoJson:any = {
         },{
             title:"Staff Software Engineer",
             date:"2019 - Current",
-            desc:"CBRE, Lead for the frontend Angular team and also developing viuals on power BI"
+            desc:"CBRE, Lead for the frontend Angular team and also developing visuals on power BI"
         }
     ],
     twitter:"https://twitter.com/adithyavin",
     github:"https://github.com/adithyavinjamoori",
     linkdn:"https://www.linkedin.com/in/adithya-vin/",
     skillset: [
-        "JavaScript","TypeScript","Angular","React","Vue","CSS","SASS","HTML5","Highcharts"
+        "JavaScript","TypeScript","Angular","React","Vue","CSS","SASS","HTML5"
     ],
     moreSkills:["Micro Frontends","Mono, Multi and Hybrid Repos"],
     Tools:[
