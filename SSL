@@ -1,0 +1,15 @@
+server {
+    listen 443 ssl;
+    server_name advin.dev;
+    ssl_certificate "/etc/pki/tls/certs/custom.crt";
+    ssl_certificate_key "/etc/pki/tls/certs/intermediate.crt";
+    
+    add_header Strict-Transport-Security "max-age=31536000";
+    #other headers
+    location / {
+      autoindex on;
+        root /home/ubuntu/portfolio;
+      index index.html;
+      try_files $uri $uri/ /index.html;
+    }
+  }
