@@ -50,6 +50,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'advin'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34A7B2B60B294B8390812BCEE8018682 }}
-          package: ./dist
+          package: ./dist/apps/ng
