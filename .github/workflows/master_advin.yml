@@ -51,4 +51,4 @@ jobs:
         with:
           app-name: 'advin'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34A7B2B60B294B8390812BCEE8018682 }}
-          package: ./dist/apps/ng
+          package: .
