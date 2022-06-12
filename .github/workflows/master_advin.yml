@@ -52,4 +52,4 @@ jobs:
           app-name: 'advin'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34A7B2B60B294B8390812BCEE8018682 }}
-          package: .
+          package: ./dist
