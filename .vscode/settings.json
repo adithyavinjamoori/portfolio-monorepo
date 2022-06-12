@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/fb68925f-b3ac-48a5-ac9f-761cd10c848a/microsoft.web/sites/subscriptions/fb68925f-b3ac-48a5-ac9f-761cd10c848a/resourceGroups/ADVIN_group/providers/Microsoft.Web/sites/advin",
+    "appService.deploySubpath": "."
+}
