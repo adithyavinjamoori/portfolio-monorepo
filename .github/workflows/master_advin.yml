@@ -25,12 +25,13 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+          npm run test --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./dist
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,5 +51,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'advin'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_67F13D9F067B4F5DB3343C5116678646 }}
-          package: ./dist
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34A7B2B60B294B8390812BCEE8018682 }}
+          package: .
